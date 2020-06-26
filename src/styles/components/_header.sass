@@ -1,0 +1,184 @@
+@import "../global/variables"
+
+.header
+  width: 100vw
+  position: fixed
+  z-index: 10
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  margin-top: 52px
+  opacity: 1
+  transition: opacity .3s ease
+  path
+    transition: fill .3s ease
+  @media screen and (max-width: 767px)
+    margin-top: 45px
+
+  .header-logo
+    width: 130px
+    height: 48px
+    margin-left: 58px
+    @media screen and (max-width: 1650px)
+      width: 110px
+    @media screen and (max-width: 1439px)
+      margin-left: 36px
+      width: 100px
+    @media screen and (max-width: 767px)
+      margin-left: 14px
+
+    &__layers
+      position: relative
+      width: 60px
+      height: 48px
+      @media screen and (max-width: 767px)
+        width: 40px
+        height: 28px
+        
+        
+    &__first-layer, &__second-layer, &__third-layer
+      position: absolute
+
+      svg
+        position: absolute
+        width: 60px
+        height: 48px
+        fill: $black
+        transition: fill .4s
+        @media screen and (max-width: 767px)
+          width: 40px
+          height: 28px
+          
+
+    &__first-layer
+      width: 48px
+      height: 48px
+      @media screen and (max-width: 767px)
+        width: 35px
+        height: 28px
+
+      svg
+        left: 0
+
+    &__second-layer
+      width: 170px
+      height: 48px
+      left: 45px
+      overflow: hidden
+      @media screen and (max-width: 767px)
+        width: 140px
+        left: 30px
+
+
+      &-content
+        width: 100%
+        height: 100%
+        position: absolute
+        left: -140px
+        transition: left ease .7s .4s
+        @media screen and (max-width: 767px)
+          left: -110px
+
+
+        svg:nth-child(1)
+          left: 125px
+          @media screen and (max-width: 767px)
+            left: 98px
+
+        svg:nth-child(2)
+          width: 130px
+          left: 7px
+          fill: $white
+          @media screen and (max-width: 767px)
+            left: 0
+
+        &_black svg:nth-child(1)
+          fill: $black
+
+    &__third-layer
+      width: 140px
+      height: 30px
+      top: 50px
+      left: 54px
+      overflow: hidden
+      @media screen and (max-width: 767px)
+        left: 35px
+        width: 80px
+        top: 33px
+
+
+      svg
+        width: 130px
+        top: -30px
+        left: 0
+        fill: $white
+        transition: top ease .5s
+        @media screen and (max-width: 767px)
+          width: 80px
+
+
+        &_black
+          fill: $black
+
+  &__description
+
+    flex-grow: 1
+    color: $white
+
+    h3
+      position: absolute
+      width: 504px
+      height: 128px
+      font-size: 24px
+      line-height: 1.37
+      top: -1px
+      opacity: 1
+      transition: top ease .7s .7s, opacity ease .7s .7s
+      @media screen and (max-width: 1439px)
+        line-height: 1.46
+      @media screen and (max-width: 1023px)
+        top: 88px
+        left: 45px
+        line-height: 1.35
+      @media screen and (max-width: 767px)
+        font-size: 14px
+        line-height: 1.5
+        height: 88px
+        width: 266px
+        left: 27px
+        top: 60px
+
+  &__feedback-btn
+    background-color: $green
+    width: 199px
+    height: 50px
+    opacity: 1
+    transition: background-color .3s
+    margin-right: 71px
+    cursor: pointer
+    @media screen and (min-width: 1440px)
+      &:hover
+        background-color: $dark-green
+    @media screen and (max-width: 1439px)
+      margin-right: 47px
+    @media screen and (max-width: 767px)
+        display: none
+
+    h3
+      color: $black
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 100%
+      font-size: 12px
+      font-weight: 500
+      letter-spacing: 1.01px
+      text-align: center
+
+  &__phone-logo
+    margin-right: 20px
+    width: 30px
+    height: 38px
+    display: none
+    @media screen and (max-width: 767px)
+      display: block

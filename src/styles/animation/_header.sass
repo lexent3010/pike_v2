@@ -1,0 +1,26 @@
+@import "../global/variables"
+
+.header_animated
+  .header-logo__second-layer-content
+    left: 0
+    transition: left ease .7s
+    @media screen and (max-width: 767px)
+      left: -20px
+
+  .header-logo__third-layer svg
+    top: -10px
+    left: 0
+    transition: top ease .5s .5s
+
+  .header__description h3
+    top: -200px
+    transition: top ease .5s, opacity ease .5s
+    @media screen and (max-width: 1023px)
+      top: 50px
+      opacity: 0
+
+.header__svg_black
+    fill: $black
+
+.header_opacity
+  opacity: 0 !important

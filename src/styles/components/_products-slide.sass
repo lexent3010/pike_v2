@@ -1,0 +1,403 @@
+@import "../global/variables"
+
+.product-name
+  font-size: 61px
+  font-weight: bold
+  line-height: 1.05
+  letter-spacing: -2px
+  @media screen and (max-width: 1439px)
+    font-size: 48px
+    line-height: 1.08
+    letter-spacing: -1.58px
+  @media screen and (max-width: 767px)
+    font-size: 28px
+    line-height: 1.09
+    letter-spacing: -0.91px
+
+
+.product-description
+  ul
+    li
+      display: flex
+      list-style: none
+    li:nth-child(1n+2)
+      margin-top: 12px
+      @media screen and (max-width: 1439px)
+        margin-top: 11px
+    li:before
+      display: block
+      width: 7px
+      height: 7px
+      content: ""
+      background: $black
+      margin-top: 8px
+      margin-right: 15px
+      flex: 0 0 7px
+
+.product-logo
+  position: absolute
+  img
+    @media screen and (max-width: 1439px)
+      height: 260px
+    @media screen and (max-width: 767px)
+      height: 120px
+
+.rock, .hover-text
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.hover-text
+  color: $white
+  width: 313px
+  height: 313px
+  background-color: #000000
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  transform: translate(-50%, -50%) scale(0)
+  transition: transform .3s
+  p
+    width: 227px
+    text-align: center
+  @media screen and (max-width: 767px)
+    display: none
+
+.feature-text
+  @media screen and (max-width: 767px)
+    width: 76px
+    height: 76px
+
+.rock
+  @media screen and (max-width: 767px)
+    width: 24px
+    height: 39px
+
+.green-text
+  color: $green
+
+
+.static-text
+  opacity: 0
+  display: none
+  position: absolute
+  width: 367px
+  height: 169px
+  padding: 24px 29px 31px 40px
+  background-color: $green
+  z-index: 11
+  @media screen and (max-width: 1439px)
+    display: flex
+    bottom: -56px
+  @media screen and (max-width: 1023px)
+    bottom: auto
+    top: 20px
+  @media screen and (max-width: 767px)
+    top: 362px
+    width: 100vw
+    height: 167px
+    padding-left: 0
+    padding-right: 0
+  &__img
+    margin-right: 25px
+    @media screen and (max-width: 767px)
+      display: none
+    img
+      width: 33px
+      height: 54px
+
+  &__text
+    padding-top: 5px
+    line-height: 1.6
+    width: 240px
+    margin: 0 auto
+
+.rotate-text-container
+  position: absolute
+  z-index: 11
+  @media screen and (max-width: 1439px)
+    display: none
+  @media screen and (max-width: 767px)
+    display: block
+    width: 76px
+    height: 76px
+
+
+
+
+.products-slide
+  background-color: rgba(0, 0, 0, 0)
+  transition: background-color ease .4s
+  height: 3265px
+  padding-top: 182px
+  @media screen and (max-width: 1650px)
+    height: 3165px
+  @media screen and (max-width: 1439px)
+    height: 2742px
+    paddint-top: 160px
+  @media screen and (max-width: 1023px)
+    height: 3764px
+  @media screen and (max-width: 767px)
+    height: 3137px
+    padding-top: 83px
+  &__container
+
+.first-product
+  @media screen and (max-width: 1023px)
+    padding-top: 295px
+  @media screen and (max-width: 767px)
+    padding-top: 132px
+  &__text
+
+  &__product-name
+
+  &__product-description
+    padding-top: 62px
+    @media screen and (max-width: 1439px)
+      padding-top: 54px
+    @media screen and (max-width: 1023px)
+      padding-top: 47px
+    @media screen and (max-width: 767px)
+      padding-top: 33px
+    ul
+      li:nth-child(1n+2)
+        margin-top: 10px
+        @media screen and (max-width: 1439px)
+          margin-top: 11px
+        @media screen and (max-width: 767px)
+          margin-top: 14px
+      li:before
+        margin-right: 27px
+        @media screen and (max-width: 767px)
+          margin-right: 25px
+
+
+  &__product-logo
+    right: 70px
+    bottom: 0
+    @media screen and (max-width: 1439px)
+      right: 80px
+      bottom: 10px
+    @media screen and (max-width: 1023px)
+      right: auto
+      bottom: auto
+      left: 0
+      top: -10px
+
+.product-container
+  position: relative
+
+.product-text
+
+
+.green-point
+
+
+
+
+.second-product
+  margin-top: 294px
+  @media screen and (max-width: 1650px)
+    margin-top: 237px
+  @media screen and (max-width: 1439px)
+    margin-top: 230px
+  @media screen and (max-width: 1023px)
+    padding-top: 285px
+  @media screen and (max-width: 767px)
+    margin-top: 105px
+    padding-top: 125px
+
+  &__text
+    margin-left: 500px
+    @media screen and (max-width: 1439px)
+      margin-left: 400px
+    @media screen and (max-width: 1023px)
+      margin-left: 0
+      width: 550px
+    @media screen and (max-width: 767px)
+      width: auto
+
+  &__product-name
+    @media screen and (max-width: 767px)
+      width: 241px
+    h2
+      br
+        display: none
+        @media screen and (max-width: 767px)
+          display: inline
+
+  &__product-description
+    padding-top: 58px
+    @media screen and (max-width: 1023px)
+      padding-top: 50px
+    @media screen and (max-width: 767px)
+      padding-top: 225px
+      ul
+        li:nth-child(1n+2)
+          margin-top: 13px
+        li:nth-child(1)
+          width: 186px
+        li:nth-child(3)
+          width: 186px
+
+
+
+  &__static-text
+
+  &__rotate-text-container
+    right: 70px
+    bottom: 114px
+    @media screen and (max-width: 767px)
+      right: -5px
+      bottom: 345px
+
+  &__rotate-text-icon
+
+  &__rotate-text-text
+
+  &__product-logo
+    left: 0
+    bottom: 90px
+    @media screen and (max-width: 1439px)
+      left: 50px
+      bottom: auto
+      top: 0
+    @media screen and (max-width: 1023px)
+      top: -20px
+      left: 0
+    @media screen and (max-width: 767px)
+      left: -15px
+
+
+
+.third-product
+  margin-top: 285px
+  @media screen and (max-width: 1650px)
+    margin-top: 275px
+  @media screen and (max-width: 1439px)
+    margin-top: 250px
+  @media screen and (max-width: 1023px)
+    padding-top: 263px
+  @media screen and (max-width: 767px)
+    margin-top: 130px
+    padding-top: 97px
+  &__product-name
+    width: 826px
+    @media screen and (max-width: 1439px)
+      width: 650px
+    @media screen and (max-width: 767px)
+      width: auto
+
+
+  &__product-description
+    padding-top: 38px
+    width: 500px
+    @media screen and (max-width: 1439px)
+      padding-top: 61px
+      width: 400px
+    @media screen and (max-width: 1023px)
+      padding-top: 50px
+      width: auto
+      ul
+        li:nth-child(1n+2)
+          margin-top: 13px
+    @media screen and (max-width: 767px)
+      padding-top: 30px
+      width: 240px
+      ul
+        li:nth-child(1)
+          width: 190px
+        li:nth-child(1n+2)
+          margin-top: 14px
+
+
+  &__product-logo
+    right: 20px
+    bottom: -90px
+    @media screen and (max-width: 1439px)
+      bottom: -32px
+      right: 45px
+    @media screen and (max-width: 1023px)
+      bottom: auto
+      right: auto
+      top: -40px
+      left: 0
+    @media screen and (max-width: 767px)
+      left: -10px
+
+.third-product-text
+
+.greenPoint
+
+.fourth-product
+  margin-top: 338px
+  @media screen and (max-width: 1650px)
+    margin-top: 328px
+  @media screen and (max-width: 1439px)
+    margin-top: 240px
+  @media screen and (max-width: 1023px)
+    padding-top: 272px
+  @media screen and (max-width: 767px)
+    margin-top: 115px
+    padding-top: 113px
+  &__text
+    margin-left: 500px
+    @media screen and (max-width: 1439px)
+      margin-left: 400px
+    @media screen and (max-width: 1023px)
+      margin-left: 0
+
+  &__product-name
+
+  &__product-description
+    padding-top: 66px
+    width: 500px
+    @media screen and (max-width: 1439px)
+      padding-top: 55px
+      width: 400px
+    @media screen and (max-width: 1023px)
+      width: auto
+      padding-top: 50px
+      ul
+        li:nth-child(1n+2)
+          margin-top: 13px
+          @media screen and (max-width: 767px)
+            margin-top: 15px
+    @media screen and (max-width: 767px)
+      padding-top: 206px
+
+  &__static-text
+    @media screen and (max-width: 1439px)
+      height: 150px
+      bottom: -20px
+    @media screen and (max-width: 1023px)
+      top: 28px
+    @media screen and (max-width: 767px)
+      top: 294px
+
+  &__rotate-text-container
+    right: 55px
+    bottom: 140px
+    @media screen and (max-width: 767px)
+      right: -5px
+      bottom: 313px
+
+  &__rotate-text-icon
+
+  &__rotate-text-text
+
+  &__product-logo
+    bottom: 150px
+    left: 15px
+    @media screen and (max-width: 1439px)
+      bottom: auto
+      top: -5px
+      left: 53px
+    @media screen and (max-width: 1023px)
+      top: -30px
+      left: 0
+
+
+

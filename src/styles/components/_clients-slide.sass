@@ -1,0 +1,254 @@
+@import "../global/variables"
+
+.clients-slide
+	color: $white
+	height: 1212px
+	display: flex
+	justify-content: center
+	align-items: center
+	overflow: hidden
+	background-color: rgba(0, 0, 0, 0)
+	transition: background-color ease .4s
+	@media screen and (max-width: 1439px)
+		height: 898px
+	@media screen and (max-width: 1023px)
+		height: 1074px
+	@media screen and (max-width: 767px)
+		height: 1235px
+
+	&__container
+		height: 843px
+		@media screen and (max-width: 1439px)
+			height: 677px
+		@media screen and (max-width: 1023px)
+			height: 815px
+		@media screen and (max-width: 767px)
+			height: 1084px
+
+
+.presentation-block
+	margin-bottom: 98px
+	display: flex
+	@media screen and (max-width: 1439px)
+		margin-bottom: 60px
+	@media screen and (max-width: 1023px)
+		flex-wrap: wrap
+		justify-content: space-between
+		flex-direction: column
+		height: 320px
+		margin-bottom: 30px
+	@media screen and (max-width: 767px)
+		height: 520px
+		margin-bottom: 87px
+
+	&__presentation-element
+		&:nth-child(1)
+			flex: 0 0 268px
+			margin-right: 132px
+			@media screen and (max-width: 1439px)
+				flex: 0 0 213px
+				margin-right: 79px
+			@media screen and (max-width: 1023px)
+				br
+					display: none
+		&:nth-child(2)
+			flex: 0 0 214px
+			margin-right: 86px
+			@media screen and (max-width: 1439px)
+				flex: 0 0 190px
+				margin-right: 50px
+		&:nth-child(3)
+			flex: 0 0 229px
+			margin-right: 71px
+			@media screen and (max-width: 1439px)
+				flex: 0 0 198px
+				margin-right: 42px
+		&:nth-child(4)
+			flex: 0 0 177px
+			@media screen and (max-width: 1439px)
+				flex: 0 0 151px
+		&:nth-child(n)
+			@media screen and (max-width: 1023px)
+				flex: 0 0 160px
+				margin: 0
+			@media screen and (max-width: 767px)
+				flex: initial
+				margin-right: 0
+		&:nth-child(-n+2)
+			@media screen and (max-width: 1023px)
+				width: 254px
+				margin-right: 143px
+			@media screen and (max-width: 767px)
+				margin-right: 0
+				width: 195px
+		&:nth-child(1n+3)
+			br
+				display: none
+				@media screen and (max-width: 1023px)
+					display: inline
+			@media screen and (max-width: 1023px)
+				width: 207px
+
+
+
+
+	&__number
+		letter-spacing: -4.8px
+		margin-bottom: 20px
+		@media screen and (max-width: 1439px)
+			letter-spacing: -1.28px
+			margin-bottom: 27px
+		@media screen and (max-width: 1023px)
+			margin-bottom: 18px
+		@media screen and (max-width: 767px)
+			margin-bottom: 6px
+
+
+	&__description
+
+
+
+.clients-block
+	&__navigation
+		display: flex
+		justify-content: space-between
+
+	&__clients-list
+
+	&__client-element
+
+		&_green
+
+.slider-navigation
+	margin-bottom: 75px
+	@media screen and (max-width: 1439px)
+		margin-bottom: 57px
+	@media screen and (max-width: 1023px)
+		margin-bottom: 40px
+	@media screen and (max-width: 767px)
+		margin-bottom: 34px
+	&__heading
+
+	&__switch-bar
+
+
+
+.clients-slider
+	&__client-element
+		width: 500px !important
+		height: 397px
+		display: grid !important
+		grid-template-rows: 1fr 1fr
+		grid-template-columns: 54% 46%
+		grid-template-areas: 'n n' 'w l'
+		background-color: $white
+		padding: 36px 32px 36px 34px
+		color: $black
+		@media screen and (max-width: 1439px)
+			width: 407px !important
+			height: 323px
+			padding: 26px 24px 26px 27px
+			grid-template-columns: 57% 43%
+		@media screen and (max-width: 1023px)
+			padding-right: 50px
+		@media screen and (max-width: 767px)
+			width: 293px !important
+			height: 380px
+			padding-top: 35px
+			grid-template-rows: 1fr 1fr 6fr
+			grid-template-columns: initial
+			grid-template-areas: 'n' 'w' 'l'
+			padding-right: 24px
+
+
+		&_green
+			background-color: $green
+
+	&__client-name
+		grid-area: n
+		@media screen and (max-width: 767px)
+			margin-bottom: 15px
+		h3
+			font-size: 40px
+			font-weight: bold
+			line-height: 1.15
+			letter-spacing: -0.85px
+			@media screen and (max-width: 1439px)
+				font-size: 30px
+				line-height: 1.17
+				letter-spacing: -0.64
+			@media screen and (max-width: 767px)
+				font-size: 25px
+				line-height: 1.12
+				letter-spacing: -0.54px
+
+	&__client-work
+		grid-area: w
+		justify-self: start
+		align-self: end
+		@media screen and (max-width: 767px)
+			align-self: start
+
+
+	&__client-logo
+		grid-area: l
+		align-self: end
+		justify-content: end
+		object-fit: fill
+		@media screen and (max-width: 767px)
+			display: flex
+			justify-content: start
+		img
+			@media screen and (max-width: 1439px)
+				height: 91px
+				margin-left: -10px
+			@media screen and (max-width: 767px)
+				height: 100px
+				align-self: flex-end
+				margin-left: initial
+
+
+#null-chanel
+	@media screen and (max-width: 767px)
+		display: none
+#null-chanel_mobile
+	display: none
+	@media screen and (max-width: 767px)
+		display: block
+
+#vgtrk-chanel
+	@media screen and (max-width: 767px)
+		display: none
+#vgtrk-chanel_mobile
+	display: none
+	@media screen and (max-width: 767px)
+		display: block
+
+#first-chanel
+	@media screen and (max-width: 767px)
+		display: none
+#first-chanel_mobile
+	display: none
+	@media screen and (max-width: 767px)
+		display: block
+
+#strim-chanel
+	@media screen and (max-width: 767px)
+		display: none
+#strim-chanel_mobile
+	display: none
+	@media screen and (max-width: 767px)
+		display: block
+
+
+
+.slick-track
+	display: flex
+
+
+.slick-arrow.slick-disabled
+	opacity: .3
+
+
+
+

@@ -1,0 +1,96 @@
+@import "../global/variables"
+
+.home-slide
+  position: relative
+  height: 100vh
+  overflow: hidden
+
+  &__background-video
+    position: absolute
+    opacity: 1
+    object-fit: cover
+    width: 100%
+    height: 100%
+    @media screen and (max-width: 767px)
+      display: none
+
+  &__background-image
+    background: url(../images/home-slide/1920-main-bgd.jpg) no-repeat right
+    display: none
+    @media screen and (max-width: 767px)
+      display: block
+      position: absolute
+      opacity: 1
+      object-fit: cover
+      width: 100vw
+      height: 100vh
+
+  &__logo-container
+    position: absolute
+    bottom: 71px
+    left: 67px
+    width: 1409px
+    @media screen and (max-width: 1650px)
+      width: 1246px
+    @media screen and (max-width: 1439px)
+      width: 929px
+      left: 47.5px
+    @media screen and (max-width: 1023px)
+      width: 683px
+      bottom: 52px
+      left: 43px
+    @media screen and (max-width: 767px)
+      width: 266px
+      left: 27px
+      bottom: 57px
+    div
+      background-size: contain
+      height: 184px
+      @media screen and (max-width: 1650px)
+        height: 163px
+      @media screen and (max-width: 1439px)
+        height: 122px
+      @media screen and (max-width: 1023px)
+        height: 133px
+      @media screen and (max-width: 767px)
+        height: 51px
+        
+
+  &__pike
+    background: url("../images/home-slide/pike.svg") no-repeat 0
+    width: 652px
+    
+    margin-bottom: 34px
+    @media screen and (max-width: 1650px)
+      width: 577px
+      margin-bottom: 30px
+    @media screen and (max-width: 1439px)
+      width: 430px
+      margin-bottom: 23px
+    @media screen and (max-width: 1023px)
+      width: 470px
+    @media screen and (max-width: 767px)
+      width: 183px
+      margin-bottom: 10px
+
+  &__medialab
+    background: url("../images/home-slide/medialab.svg") no-repeat 0
+    width: 100%
+    @media screen and (max-width: 1023px)
+      background: url("../images/home-slide/media.svg") no-repeat 0
+      margin-bottom: 24px
+    @media screen and (max-width: 767px)
+      margin-bottom: 10px
+
+
+  &__media-lab-lite
+    display: none
+    background: url("../images/home-slide/lab.svg") no-repeat 0
+    @media screen and (max-width: 1023px)
+      display: block
+      width: 316px
+      margin-left: auto
+      margin-right: 0
+    @media screen and (max-width: 767px)
+      width: 123px
+

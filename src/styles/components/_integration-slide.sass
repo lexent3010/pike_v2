@@ -1,0 +1,137 @@
+@import "../global/variables"
+
+.integration-slide
+  height: 991px
+  display: flex
+  background-color: #cccccc
+  align-items: center
+  @media screen and (max-width: 1650px)
+    height: 867px
+  @media screen and (max-width: 1439px)
+    height: 768px
+  @media screen and (max-width: 1023px)
+    height: 973px
+  @media screen and (max-width: 767px)
+    height: 644px
+  &__background
+    position: absolute
+    display: flex
+    justify-content: flex-end
+    height: 100%
+    width: 100%
+    right: 0
+    z-index: 0
+    @media screen and (max-width: 1023px)
+      justify-content: initial
+      right: auto
+      left: 70px
+    @media screen and (max-width: 767px)
+      left: -26px
+    @media screen and (max-width: 767px)
+      width: 313px
+
+
+  &__background-item
+    width: 334px
+    height: 100%
+    background: url("../images/integration-slide/arrow.svg") no-repeat 0 0
+    background-size: contain
+    @media screen and (max-width: 1439px)
+      width: 276px
+    @media screen and (max-width: 1023px)
+      width: 375px
+    @media screen and (max-width: 767px)
+      width: 313px
+
+  &__background-item-1
+
+  &__background-item-2
+    @media screen and (max-width: 1023px)
+      display: none
+
+  &__background-item-3
+    @media screen and (max-width: 1023px)
+      display: none
+  &__container
+    position: relative
+    height: 614px
+    @media screen and (max-width: 1439px)
+      height: 507px
+    @media screen and (max-width: 1023px)
+      height: 684px
+    @media screen and (max-width: 767px)
+      height: 565px
+
+  &__title
+    position: absolute
+    top: 75px
+    @media screen and (max-width: 1439px)
+      top: 105px
+    @media screen and (max-width: 1023px)
+      top: 77px
+      left: 10px
+    @media screen and (max-width: 767px)
+      left: 0
+      top: 66px
+
+  &__description
+    position: absolute
+    display: flex
+    width: 100%
+    bottom: 165px
+    padding-left: 210px
+    @media screen and (max-width: 1439px)
+      padding-left: 133px
+      bottom: 127px
+    @media screen and (max-width: 1023px)
+      flex-direction: column
+      padding-left: 174px
+      bottom: 203px
+    @media screen and (max-width: 767px)
+      padding-left: 0
+      bottom: 78px
+
+
+  &__item
+    display: flex
+    width: 270px
+    @media screen and (max-width: 1023px)
+      width: 440px
+    @media screen and (max-width: 767px)
+      width: 250px
+
+
+  &__item:nth-child(-n+2)
+    margin-right: 60px
+    @media screen and (max-width: 1439px)
+      margin-right: 20px
+    @media screen and (max-width: 1023px)
+      margin-bottom: 68px
+    @media screen and (max-width: 767px)
+      margin-bottom: 45px
+
+
+  &__item:before
+    display: block
+    width: 12px
+    height: 12px
+    content: ""
+    background: $black
+    margin-top: 3px
+    margin-right: 15px
+    flex: 0 0 12px
+    @media screen and (max-width: 1439px)
+      width: 10px
+      height: 10px
+      flex: 0 0 10px
+    @media screen and (max-width: 1023px)
+      margin-top: 6px
+      margin-right: 17px
+    @media screen and (max-width: 767px)
+      margin-right: 23px
+
+  &__item-1
+
+  &__item-2
+
+  &__item-3

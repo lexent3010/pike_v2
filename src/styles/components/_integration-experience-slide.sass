@@ -1,0 +1,124 @@
+@import "../global/variables"
+
+.integration-experience-slide
+  position: relative
+  height: 944px
+  overflow: hidden
+  @media screen and (max-width: 1650px)
+    height: 985px
+  @media screen and (max-width: 1439px)
+    height: 768px
+  @media screen and (max-width: 1023px)
+    height: 808px
+  @media screen and (max-width: 767px)
+    height: 592px
+
+  &__br
+    @media screen and (max-width: 1439px)
+      display: none
+
+  &__background-video
+    position: absolute
+    width: 100%
+    height: 100%
+    object-fit: cover
+    @media screen and (max-width: 767px)
+      display: none
+
+  &__background-image
+    position: absolute
+    width: 100%
+    height: 100%
+    display: none
+    background: url("../../src/images/integration-experience-slide/03-integration.png")
+    @media screen and (max-width: 767px)
+      display: block
+
+
+  &__container
+    padding-top: 214px
+    position: relative
+    @media screen and (max-width: 1650px)
+      padding-top: 197px
+    @media screen and (max-width: 1439px)
+      padding-top: 152px
+    @media screen and (max-width: 767px)
+      padding-top: 64px
+
+  &__navigation
+    display: flex
+    justify-content: space-between
+    margin-bottom: 95px
+    @media screen and (max-width: 1439px)
+      margin-bottom: 58px
+    @media screen and (max-width: 1023px)
+      margin-bottom: 69px
+    @media screen and (max-width: 767px)
+      margin-bottom: 30px
+      flex-direction: column
+
+.int-slider-navigation
+  display: flex
+  justify-content: space-between
+
+  &__heading
+    color: $white
+    line-height: 0.8
+    @media screen and (max-width: 767px)
+      margin-bottom: 66px
+
+  &__switch-bar
+    align-self: flex-end
+    @media screen and (max-width: 1023px)
+      width: 80px
+    @media screen and (max-width: 767px)
+      align-self: flex-start
+      width: 54px
+
+.integration-experience-slider
+  display: flex
+  &__slide
+    width: 500px !important
+    height: 315px
+    padding: 35px 36px 38px 34px
+    background-color: $white
+    display: flex !important
+    flex-direction: column
+    justify-content: space-between
+    @media screen and (max-width: 1439px)
+      width: 425px !important
+      padding-left: 30px
+    @media screen and (max-width: 767px)
+      width: 294px !important
+      height: 270px
+      padding-bottom: 27px
+      padding-left: 32px
+      padding-right: 30px
+    div
+      width: 100%
+
+
+    &_green
+      background-color: $green
+      .integration-experience-slider__date
+        color: $white
+
+  &__description
+    font-size: 24px
+    line-height: 1.46
+    @media screen and (max-width: 767px)
+      font-size: 14px
+      line-height: 1.57
+
+  &__date
+    color: $green
+    font-size: 24px
+    line-height: 1.33
+    @media screen and (max-width: 767px)
+      font-size: 14px
+      line-height: 2.29
+
+.slider
+
+
+

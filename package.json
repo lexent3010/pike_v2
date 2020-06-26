@@ -1,0 +1,25 @@
+{
+  "name": "pike",
+  "version": "2.0.0",
+  "description": "Pike MediaLab",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html -p 3000 --open",
+    "clean": "rm -rf dist/*",
+    "build:parcel": "parcel build ./index.html",
+    "build": "npm run clean && npm run build:parcel"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "node-sass": "^4.14.1",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "gsap": "^3.3.1",
+    "inputmask": "^5.0.3",
+    "jquery": "^3.5.1",
+    "parcel-plugin-imagemin": "^4.0.1",
+    "slick-carousel": "^1.8.1"
+  }
+}
