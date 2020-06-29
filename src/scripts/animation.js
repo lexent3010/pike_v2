@@ -8,11 +8,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 $(() => {
 
-    window.addEventListener('resize', () => {
-        if ($(window).width() < 768) {
-        }
-
-    });
+    window.onbeforeunload = () => {
+        ScrollTrigger.refresh()
+        scrollTo(0, 0)
+    }
 
     gsap.timeline() // Анимация маски
         .fromTo('.green', {height: '100vh'}, {
@@ -31,14 +30,12 @@ $(() => {
         .fromTo('#medialab', {x: -50, opacity: 0}, {x: 0, opacity: 1, delay: .7}, 0)
         .fromTo('#mediaLabLite', {x: -50, opacity: 0}, {x: 0, opacity: 1, delay: .7}, 0);
 
-
     ScrollTrigger.create({ // Анимация логотипа в шапке, на скролл
         trigger: '.home-slide',
         start: '20% top',
         endTrigger: '.app-wrapper',
         toggleClass: {targets: '.header', className: 'header_animated'}
-    })
-
+    });
 
     if ($(window).width() > 768) {
         const logoAnimation = gsap.timeline();
@@ -188,9 +185,15 @@ $(() => {
 
     const firstProdAnimation = gsap.timeline();
     firstProdAnimation
-        .fromTo('.first-product__product-name', {y: 100, opacity: 0}, {y:0, opacity: 1, duration: 1}, 0)
-        .fromTo('.first-product__product-description', {y: 100, opacity: 0}, {y:0, opacity:1, duration: 1, delay: .3, ease: "power3.out"}, 0)
-        .fromTo('.first-product__product-logo', {y: 100, opacity: 0}, {y:0, opacity:1, duration: 1}, 0)
+        .fromTo('.first-product__product-name', {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
+        .fromTo('.first-product__product-description', {y: 100, opacity: 0}, {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: .3,
+            ease: "power3.out"
+        }, 0)
+        .fromTo('.first-product__product-logo', {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
 
     ScrollTrigger.create({ // Анимация первого продукта
         animation: firstProdAnimation,
@@ -200,11 +203,17 @@ $(() => {
 
     const secondProdAnimation = gsap.timeline();
     secondProdAnimation
-        .fromTo('.second-product__product-name', {y: 100, opacity: 0}, {y:0, opacity: 1, duration: 1}, 0)
-        .fromTo('.second-product__product-description', {y: 100, opacity: 0}, {y:0, opacity:1, duration: 1, delay: .3, ease: "power3.out"}, 0)
-        .fromTo('.second-product__product-logo', {y: 100, opacity: 0}, {y:0, opacity:1, duration: 1}, 0)
-        .fromTo('.second-product__rotate-text-container', {y: 100, opacity: 0}, {y:0, opacity:1, duration: 1}, 0)
-        .fromTo('.second-product__static-text', { opacity: 0}, {opacity:1, duration: 1, delay: .7}, 0)
+        .fromTo('.second-product__product-name', {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
+        .fromTo('.second-product__product-description', {y: 100, opacity: 0}, {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: .3,
+            ease: "power3.out"
+        }, 0)
+        .fromTo('.second-product__product-logo', {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
+        .fromTo('.second-product__rotate-text-container', {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
+        .fromTo('.second-product__static-text', {opacity: 0}, {opacity: 1, duration: 1, delay: .7}, 0)
 
     ScrollTrigger.create({ // Анимация второго продукта
         animation: secondProdAnimation,
@@ -224,9 +233,15 @@ $(() => {
 
     const thirdProdAnimation = gsap.timeline();
     thirdProdAnimation
-        .fromTo('.third-product__product-name', {y: 100, opacity: 0}, {y:0, opacity: 1, duration: 1}, 0)
-        .fromTo('.third-product__product-description', {y: 100, opacity: 0}, {y:0, opacity:1, duration: 1, delay: .3, ease: "power3.out"}, 0)
-        .fromTo('.third-product__product-logo', {y: 100, opacity: 0}, {y:0, opacity:1, duration: 1}, 0)
+        .fromTo('.third-product__product-name', {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
+        .fromTo('.third-product__product-description', {y: 100, opacity: 0}, {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: .3,
+            ease: "power3.out"
+        }, 0)
+        .fromTo('.third-product__product-logo', {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
 
     ScrollTrigger.create({ // Анимация третьего продукта
         animation: thirdProdAnimation,
@@ -236,11 +251,17 @@ $(() => {
 
     const fourthProdAnimation = gsap.timeline();
     fourthProdAnimation
-        .fromTo('.fourth-product__product-name', {y: 100, opacity: 0}, {y:0, opacity: 1, duration: 1}, 0)
-        .fromTo('.fourth-product__product-description', {y: 100, opacity: 0}, {y:0, opacity:1, duration: 1, delay: .3, ease: "power3.out"}, 0)
-        .fromTo('.fourth-product__product-logo', {y: 100, opacity: 0}, {y:0, opacity:1, duration: 1}, 0)
-        .fromTo('.fourth-product__rotate-text-container', {y: 100, opacity: 0}, {y:0, opacity:1, duration: 1}, 0)
-        .fromTo('.fourth-product__static-text', { opacity: 0}, {opacity:1, duration: 1, delay: .7}, 0)
+        .fromTo('.fourth-product__product-name', {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
+        .fromTo('.fourth-product__product-description', {y: 100, opacity: 0}, {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: .3,
+            ease: "power3.out"
+        }, 0)
+        .fromTo('.fourth-product__product-logo', {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
+        .fromTo('.fourth-product__rotate-text-container', {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
+        .fromTo('.fourth-product__static-text', {opacity: 0}, {opacity: 1, duration: 1, delay: .7}, 0)
 
     ScrollTrigger.create({ // Анимация четвертого продукта
         animation: fourthProdAnimation,
@@ -269,8 +290,7 @@ $(() => {
         animation: pmlAnimationEnd,
         trigger: '.pml-slide',
         start: 'bottom 50%',
-        toggleActions: "restart none none reverse",
-        markers: true
+        toggleActions: "restart none none reverse"
     });
 
     const pmlAnimationStart = gsap.timeline();
@@ -285,12 +305,23 @@ $(() => {
     });
 
 
-
     const intSlideAnimation = gsap.timeline();
     intSlideAnimation
         .fromTo('.integration-slide__title', {y: 60, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: .1}, 0)
-        .fromTo('.integration-slide__background-item', {x: -30, opacity: 0}, {x: 0, opacity: 1, duration: 1, stagger: .1, delay: .3}, 0)
-        .fromTo('.integration-slide__item', {x: -30, opacity: 0}, {x: 0, opacity: 1, duration: 1, stagger: .1, delay: .6}, 0)
+        .fromTo('.integration-slide__background-item', {x: -30, opacity: 0}, {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: .1,
+            delay: .3
+        }, 0)
+        .fromTo('.integration-slide__item', {x: -30, opacity: 0}, {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: .1,
+            delay: .6
+        }, 0)
 
     ScrollTrigger.create({ // Анимация слайда интеграции
         animation: intSlideAnimation,
@@ -314,7 +345,13 @@ $(() => {
         .fromTo('.feedback-form__title', {y: 150, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
         .fromTo('.feedback-form__description', {y: 150, opacity: 0}, {y: 0, opacity: 1, duration: 1, delay: .3}, 0)
         .fromTo('.feedback-form__input-item', {y: 150, opacity: 0}, {y: 0, opacity: 1, duration: 1, delay: .3}, 0)
-        .fromTo('.feedback-form__send-button', {y: 150, opacity: 0}, {y: 0, opacity: 1, duration: 1, delay: .5, ease: "power2.out"}, 0)
+        .fromTo('.feedback-form__send-button', {y: 150, opacity: 0}, {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: .5,
+            ease: "power2.out"
+        }, 0)
 
     ScrollTrigger.create({ // Анимация слайда интеграции
         animation: feedBackAnimation,
@@ -322,6 +359,35 @@ $(() => {
         start: 'top 50%'
     });
 
+    $('#feedback-btn').click(() => {
+        $('.popup-feedback-form').css('display', 'flex')
+        const popupAnimation = gsap.timeline();
+        popupAnimation
+            .fromTo('.popup-feedback-form__title', {y: 150, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
+            .fromTo('.popup-feedback-form__description', {y: 150, opacity: 0}, {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                delay: .3
+            }, 0)
+            .fromTo('.popup-feedback-form__input-item', {y: 150, opacity: 0}, {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                delay: .3
+            }, 0)
+            .fromTo('.popup-feedback-form__send-button', {y: 150, opacity: 0}, {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                delay: .5,
+                ease: "power2.out"
+            }, 0)
+    })
+
+    $('.popup-feedback-form__close').click(() => {
+        $('.popup-feedback-form').css('display', 'none')
+    })
 
 });
 
