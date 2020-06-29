@@ -65,7 +65,6 @@ $(() => {
         $('.feedback-form__name-validation').css('display', 'none')
     })
 
-    let validationForm = () => {
         Inputmask({mask: "+7 (999) 999-99-99", jitMasking: true, showMaskOnHover: null}).mask('#phone')   // Макса для номера телефона и проверка
         $("input[id='phone']").blur(() => {
             if ($("input[id='phone']").val().length < 18) {
@@ -90,8 +89,6 @@ $(() => {
             $('.feedback-form__item-3').css('border-bottom', '2px solid #01da00')
             $('.feedback-form__message-validation').css('display', 'none')
         })
-    }
-    validationForm()
 
     $('.feedback-form__send-button').click(() => {
         if ($("input[id='name']").val().length >= 1 && $("input[id='phone']").val().length >= 18 && $("textarea[id='message']").val().length >= 1) {
