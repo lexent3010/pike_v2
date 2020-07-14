@@ -1,7 +1,7 @@
 @import "../global/variables"
 
 .header
-  width: 100vw
+  width: 94vw
   position: fixed
   z-index: 10
   display: flex
@@ -10,6 +10,10 @@
   margin-top: 52px
   opacity: 1
   transition: opacity .3s ease
+  margin-left: auto
+  margin-right: auto
+  right: 0
+  left: 0
   path
     transition: fill .3s ease
   @media screen and (max-width: 767px)
@@ -18,14 +22,10 @@
   .header-logo
     width: 130px
     height: 48px
-    margin-left: 58px
     @media screen and (max-width: 1650px)
       width: 110px
     @media screen and (max-width: 1439px)
-      margin-left: 36px
       width: 100px
-    @media screen and (max-width: 767px)
-      margin-left: 14px
 
     &__layers
       position: relative
@@ -140,10 +140,10 @@
         left: 45px
         line-height: 1.35
       @media screen and (max-width: 767px)
-        font-size: 14px
+        font-size: 4.38vw
         line-height: 1.5
-        height: 88px
-        width: 266px
+        height: 27.5vw
+        width: 83.13vw
         left: 27px
         top: 60px
 
@@ -153,13 +153,10 @@
     height: 50px
     opacity: 1
     transition: background-color .3s
-    margin-right: 71px
     cursor: pointer
     @media screen and (min-width: 1440px)
       &:hover
         background-color: $dark-green
-    @media screen and (max-width: 1439px)
-      margin-right: 47px
     @media screen and (max-width: 767px)
         display: none
 

@@ -4,7 +4,7 @@
   "description": "Pike MediaLab",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html -p 3000 --open",
+    "start": "parcel --no-cache index.html -p 3000 --open",
     "clean": "rm -rf dist/*",
     "build:parcel": "parcel build ./index.html",
     "build": "npm run clean && npm run build:parcel"

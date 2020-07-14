@@ -18,6 +18,7 @@
 
 	&__container
 		height: 843px
+		position: relative
 		@media screen and (max-width: 1439px)
 			height: 677px
 		@media screen and (max-width: 1023px)
@@ -116,8 +117,14 @@
 		margin-bottom: 40px
 	@media screen and (max-width: 767px)
 		margin-bottom: 34px
+	&__switch-bar
+		align-items: flex-end
+		margin-bottom: 10px
+		@media screen and (max-width: 767px)
+			margin-bottom: 5px
 
 .clients-slider
+	display: flex
 	&__client-element
 		width: 500px !important
 		height: 397px

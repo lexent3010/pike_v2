@@ -11,6 +11,10 @@
 
 body
   background: url("../images/common/noise.gif")
+  transition: background .3s ease
+
+.body_animated
+  background: url("../images/common/white-noise.gif")
 
 a
   text-decoration: none
@@ -51,6 +55,19 @@ a
   height: 100%
   background-color: $black
 
+.background-video
+  position: absolute
+  object-fit: cover
+  width: auto
+  height: auto
+  min-width: 100vw
+  min-height: 100vh
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  @media screen and (max-width: 767px)
+    display: none
+
 .background-image
   width: 100%
   height: 100%
@@ -83,8 +100,13 @@ a
   display: flex
   justify-content: space-between
   width: 90px
+  @media screen and (max-width: 1439px)
+    width: 80px
+  @media screen and (max-width: 1023px)
+    margin-right: -20px
   @media screen and (max-width: 767px)
     width: 55px
+    margin-right: 0
 
 .selector
   @media screen and (min-width: 1440px)

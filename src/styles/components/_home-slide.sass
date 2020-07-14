@@ -4,15 +4,11 @@
   position: relative
   height: 100vh
   overflow: hidden
-
-  &__background-video
-    position: absolute
-    opacity: 1
-    object-fit: cover
-    width: 100%
-    height: 100%
-    @media screen and (max-width: 767px)
-      display: none
+  min-height: 750px
+  @media screen and (max-width: 1023px)
+    min-height: 850px
+  @media screen and (max-width: 767px)
+    min-height: 450px
 
   &__background-image
     background: url(../images/home-slide/1920-main-bgd.jpg) no-repeat right
@@ -40,12 +36,15 @@
       bottom: 52px
       left: 43px
     @media screen and (max-width: 767px)
-      width: 266px
-      left: 27px
+      width: 83.13vw
+      left: 0
+      right: 0
+      margin: 0 auto
       bottom: 57px
     div
       background-size: contain
       height: 184px
+      width: 100%
       @media screen and (max-width: 1650px)
         height: 163px
       @media screen and (max-width: 1439px)
@@ -53,44 +52,30 @@
       @media screen and (max-width: 1023px)
         height: 133px
       @media screen and (max-width: 767px)
-        height: 51px
+        height: 15.94vw
         
 
   &__pike
     background: url("../images/home-slide/pike.svg") no-repeat 0
-    width: 652px
-    
-    margin-bottom: 34px
-    @media screen and (max-width: 1650px)
-      width: 577px
-      margin-bottom: 30px
-    @media screen and (max-width: 1439px)
-      width: 430px
-      margin-bottom: 23px
-    @media screen and (max-width: 1023px)
-      width: 470px
-    @media screen and (max-width: 767px)
-      width: 183px
-      margin-bottom: 10px
 
   &__medialab
     background: url("../images/home-slide/medialab.svg") no-repeat 0
-    width: 100%
+    margin-top: 34px
+    @media screen and (max-width: 1650px)
+      margin-top: 30px
+    @media screen and (max-width: 1439px)
+      margin-top: 23px
     @media screen and (max-width: 1023px)
       background: url("../images/home-slide/media.svg") no-repeat 0
       margin-bottom: 24px
     @media screen and (max-width: 767px)
+      margin-top: 10px
       margin-bottom: 10px
 
 
   &__media-lab-lite
     display: none
-    background: url("../images/home-slide/lab.svg") no-repeat 0
+    background: url("../images/home-slide/lab.svg") no-repeat right
     @media screen and (max-width: 1023px)
       display: block
-      width: 316px
-      margin-left: auto
-      margin-right: 0
-    @media screen and (max-width: 767px)
-      width: 123px
 

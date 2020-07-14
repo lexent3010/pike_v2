@@ -5,6 +5,8 @@
   color: $white
   display: flex
   align-items: center
+  overflow: hidden
+  background: url("../images/common/noise.gif")
   @media screen and (max-width: 1650px)
     align-items: initial
     padding-top: 138px
@@ -70,7 +72,7 @@
     flex-direction: column
     @media screen and (max-width: 1439px)
       width: 428px
-    @media screen and (max-width: 1023px)
+    @media screen and (max-width: 767px)
       width: 266px
 
   &__input-item
@@ -81,8 +83,6 @@
       margin-bottom: 27px
     @media screen and (max-width: 767px)
       margin-bottom: 38px
-
-  &__item-1
 
   &__item-2
     margin-bottom: 47px
@@ -156,11 +156,11 @@
   background: url("../images/common/Noise.gif")
   width: 100vw
   height: 100vh
-  min-height: 700px
   left: 0
   top: 0
   z-index: 50
   display: none
+  overflow-y: initial
   &__close
     position: absolute
     top: 100px
@@ -168,10 +168,25 @@
     cursor: pointer
     path
       transition: fill .3s
+    @media screen and (max-width: 767px)
+      top: 30px
+      right: 30px
+      width: 29px
+      height: 29px
     @media screen and (min-width: 1440px)
       &:hover
         path
           fill: $green
+  form
+    margin-bottom: 180px
+    @media screen and (max-width: 1650px)
+      margin-bottom: 115px
+    @media screen and (max-width: 1439px)
+      margin-bottom: 124px
+    @media screen and (max-width: 1023px)
+      margin-bottom: 171px
+    @media screen and (max-width: 767px)
+      margin-bottom: 74px
 
 .send-success
   font-size: 24px

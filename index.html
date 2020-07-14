@@ -51,10 +51,10 @@
                 телеканалов <span class="br-span"><br></span> и операторов VOD
             </h3>
         </div>
-        <div id="feedback-btn" class="header__feedback-btn feedback-btn">
+        <div class="header__feedback-btn feedback-btn">
             <h3>СВЯЗАТЬСЯ С НАМИ</h3>
         </div>
-        <div id="feedback-btn" class="header__phone-logo">
+        <div class="header__phone-logo feedback-btn">
             <svg class="phone-logo" xmlns="http://www.w3.org/2000/svg" width="29" height="35" viewBox="0 0 29 35">
                 <path fill="#01DA00" fill-rule="evenodd"
                       d="M21.686 22.45l-6.444 4.006-7.77-11.54 6.444-4.004-6.374-9.466C1.455 6.476-.104 15.657 4.272 23.42c4.903 8.7 15.427 12.364 23.659 8.306l-6.245-9.274z"/>
@@ -62,7 +62,7 @@
         </div>
     </header>
     <section class="home-slide">
-        <video class="home-slide__background-video" autoplay="auto" muted="auto" loop="auto"
+        <video class="background-video" autoplay="auto" muted="auto" loop="auto"
                preload="auto" playsinline="auto">
             <source src="/src/video/Presentacia_1_hq.mp4" type="video/mp4"/>
         </video>
@@ -301,7 +301,7 @@
     </div>
     <a target="_blank" href="http://red-is.ru/">
         <section class="pml-slide">
-            <video class="pml-slide__background-video" autoplay="auto" muted="auto" loop="auto"
+            <video class="pml-slide__background-video background-video" autoplay="auto" muted="auto" loop="auto"
                    preload="auto" playsinline="auto">
                 <source src="src/video/Presentacia_2_hq.mp4" type="video/mp4"/>
             </video>
@@ -338,7 +338,7 @@
         </div>
     </div>
     <div class="integration-experience-slide">
-        <video class="integration-experience-slide__background-video" autoplay="auto" muted="auto" loop="auto"
+        <video class="integration-experience-slide__background-video background-video" autoplay="auto" muted="auto" loop="auto"
                preload="auto" playsinline="auto">
             <source src="src/video/Presentacia_3_hq.mp4" type="video/mp4"/>
         </video>
@@ -427,7 +427,10 @@
                     </div>
                     <div class="feedback-form__input-item feedback-form__item-2">
                         <input id="phone" class="input subtitle" name="phone" type="text" placeholder="Телефон">
-                        <div class="feedback-form__phone-validation feedback-form__validation">неправильный формат</div>
+                        <div class="feedback-form__phone-validation_format feedback-form__validation">неправильный
+                            формат
+                        </div>
+                        <div class="feedback-form__phone-validation feedback-form__validation">введите телефон</div>
                     </div>
                     <div class="feedback-form__input-item feedback-form__item-3">
                             <textarea id="message" class="input subtitle" name="message"
@@ -579,42 +582,47 @@
             </div>
         </div>
     </footer>
-    <div class="feedback-slide popup-feedback-form">
-        <svg class="popup-feedback-form__close" xmlns="http://www.w3.org/2000/svg" width="46" height="39" viewBox="0 0 46 39">
-            <g fill="#FFF" fill-rule="evenodd">
-                <path d="M28.401 19.496L45.993 0H36.59L19 19.496l17.591 19.496L46 39z"/>
-                <path d="M17.599 19.496L.007 0H9.41L27 19.496 9.409 38.992 0 39z"/>
-            </g>
-        </svg>
+</div>
+<div class="feedback-slide popup-feedback-form">
+    <svg class="popup-feedback-form__close" xmlns="http://www.w3.org/2000/svg" width="46" height="39"
+         viewBox="0 0 46 39">
+        <g fill="#FFF" fill-rule="evenodd">
+            <path d="M28.401 19.496L45.993 0H36.59L19 19.496l17.591 19.496L46 39z"/>
+            <path d="M17.599 19.496L.007 0H9.41L27 19.496 9.409 38.992 0 39z"/>
+        </g>
+    </svg>
 
-        <section class="feedback-form container">
-            <div class="feedback-form__title popup-feedback-form__title title">
-                <h2>Разработаем <br> решение под ваши <br> задачи<span class="greenPoint">.</span></h2>
+    <section class="feedback-form container popup-feedback-form__container">
+        <div class="feedback-form__title popup-feedback-form__title title">
+            <h2>Разработаем <br> решение под ваши <br> задачи<span class="greenPoint">.</span></h2>
+        </div>
+        <div class="feedback-form__description-input-list">
+            <div class="feedback-form__description popup-feedback-form__description subtitle">Возникли вопросы или
+                хотите оценить стоимость
+                проекта? Оставьте
+                заявку и наш менеджер с вами свяжется.
             </div>
-            <div class="feedback-form__description-input-list">
-                <div class="feedback-form__description popup-feedback-form__description subtitle">Возникли вопросы или хотите оценить стоимость
-                    проекта? Оставьте
-                    заявку и наш менеджер с вами свяжется.
+            <form class="feedback-form__input-list">
+                <div class="feedback-form__input-item popup-feedback-form__input-item feedback-form__item-1">
+                    <input id="name" class="input subtitle" name="name" type="text" placeholder="Ваше имя">
+                    <div class="feedback-form__name-validation feedback-form__validation">введите имя</div>
                 </div>
-                <form class="feedback-form__input-list">
-                    <div class="feedback-form__input-item popup-feedback-form__input-item feedback-form__item-1">
-                        <input id="name" class="input subtitle" name="name" type="text" placeholder="Ваше имя">
-                        <div class="feedback-form__name-validation feedback-form__validation">введите имя</div>
+                <div class="feedback-form__input-item popup-feedback-form__input-item feedback-form__item-2">
+                    <input id="phone" class="input subtitle" name="phone" type="text" placeholder="Телефон">
+                    <div class="feedback-form__phone-validation_format feedback-form__validation">неправильный формат
                     </div>
-                    <div class="feedback-form__input-item popup-feedback-form__input-item feedback-form__item-2">
-                        <input id="phone" class="input subtitle" name="phone" type="text" placeholder="Телефон">
-                        <div class="feedback-form__phone-validation feedback-form__validation">неправильный формат</div>
-                    </div>
-                    <div class="feedback-form__input-item popup-feedback-form__input-item feedback-form__item-3">
+                    <div class="feedback-form__phone-validation feedback-form__validation">введите телефон</div>
+                </div>
+                <div class="feedback-form__input-item popup-feedback-form__input-item feedback-form__item-3">
                             <textarea id="message" class="input subtitle" name="message"
                                       placeholder="Сообщение"></textarea>
-                        <div class="feedback-form__message-validation feedback-form__validation">введите сообщение</div>
-                    </div>
-                    <div id="send-button" class="feedback-form__send-button popup-feedback-form__send-button"><span>ОТПРАВИТЬ</span></div>
-                </form>
-            </div>
-        </section>
-    </div>
+                    <div class="feedback-form__message-validation feedback-form__validation">введите сообщение</div>
+                </div>
+                <div id="send-button" class="feedback-form__send-button popup-feedback-form__send-button"><span>ОТПРАВИТЬ</span>
+                </div>
+            </form>
+        </div>
+    </section>
 </div>
 <script src="src/scripts/animation.js"></script>
 <script src="src/scripts/common.js"></script>

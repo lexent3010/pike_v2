@@ -6,12 +6,16 @@ window.$ = window.jQuery = jQuery;
 
 gsap.registerPlugin(ScrollTrigger);
 
+window.onbeforeunload = () => {
+    scrollTo(0, 0)
+}
+
 $(() => {
 
-    window.onbeforeunload = () => {
-        ScrollTrigger.refresh()
+    setTimeout(() => {
         scrollTo(0, 0)
-    }
+        ScrollTrigger.refresh()
+    }, 800)
 
     gsap.timeline() // Анимация маски
         .fromTo('.green', {height: '100vh'}, {
@@ -37,19 +41,25 @@ $(() => {
         toggleClass: {targets: '.header', className: 'header_animated'}
     });
 
-    if ($(window).width() > 768) {
+    const logoAnimationToggle = () => {
         const logoAnimation = gsap.timeline();
-        logoAnimation   // Анимация логотипов на первом слайде, на скролл
-            .fromTo('#pike', {x: 0}, {
-                x: window.innerWidth
-            }, 0)
-            .fromTo('#medialab', {x: 0}, {
-                x: -window.innerWidth
-            }, 0)
-            .fromTo('#mediaLabLite', {x: 0}, {
-                x: window.innerWidth
-            }, 0);
-
+        if ($(window).width() > 1023) {
+            logoAnimation   // Анимация логотипов на первом слайде, на скролл
+                .fromTo('#pike', {x: 0}, {
+                    x: window.innerWidth
+                }, 0)
+                .fromTo('#medialab', {x: 0}, {
+                    x: -window.innerWidth
+                }, 0)
+        } else {
+            logoAnimation   // Анимация логотипов на первом слайде, на скролл
+                .fromTo('#pike', {x: 0}, {
+                    x: 0
+                }, 0)
+                .fromTo('#medialab', {x: 0}, {
+                    x: 0
+                }, 0)
+        }
         ScrollTrigger.create({
             animation: logoAnimation,
             trigger: '.home-slide',
@@ -58,19 +68,13 @@ $(() => {
             end: 'bottom',
         })
     }
+    logoAnimationToggle()
 
     ScrollTrigger.create({ // Анимация смены фона
         trigger: '.clients-slide',
         start: '50% top',
         endTrigger: '.app-wrapper',
-        toggleClass: 'clients-slide_animated'
-    })
-
-    ScrollTrigger.create({ // Анимация смены фона
-        trigger: '.clients-slide',
-        start: '50% top',
-        endTrigger: '.app-wrapper',
-        toggleClass: {targets: '.products-slide', className: 'products-slide_animated'}
+        toggleClass: {targets: 'body', className: 'body_animated'}
     })
 
     ScrollTrigger.create({ // Анимация смены цвета шапки
@@ -175,7 +179,7 @@ $(() => {
     const clientSliderAnimation = gsap.timeline();
     clientSliderAnimation
         .fromTo('.clients-block__navigation', {y: 100, opacity: 0}, {y: 0, opacity: 1}, 0)
-        .fromTo('.clients-slider', {x: 350, opacity: 0}, {x: 0, opacity: 1, delay: .5}, 0);
+        .fromTo('.clients-slider', {x: 350, opacity: 0}, {x: 0, opacity: 1, delay: .5, duration: 1}, 0);
 
     ScrollTrigger.create({ // Анимация слайдера клиентов
         animation: clientSliderAnimation,
@@ -359,10 +363,12 @@ $(() => {
         start: 'top 50%'
     });
 
-    $('#feedback-btn').click(() => {
-        $('.popup-feedback-form').css('display', 'flex')
-        const popupAnimation = gsap.timeline();
-        popupAnimation
+    $('.feedback-btn').click(() => {   // Открытие попапа
+        $('.popup-feedback-form').css('display', 'flex');
+        $('body').css('overflow', 'hidden')
+        const popupAnimationOpen = gsap.timeline();
+        popupAnimationOpen
+            .fromTo('.popup-feedback-form', {opacity: 0}, {opacity: 1, duration: .3}, 0)
             .fromTo('.popup-feedback-form__title', {y: 150, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0)
             .fromTo('.popup-feedback-form__description', {y: 150, opacity: 0}, {
                 y: 0,
@@ -385,8 +391,15 @@ $(() => {
             }, 0)
     })
 
-    $('.popup-feedback-form__close').click(() => {
-        $('.popup-feedback-form').css('display', 'none')
+    $('.popup-feedback-form__close').click(() => {    // Закрытие попапа
+        gsap.fromTo('.popup-feedback-form', {opacity: 1}, {opacity: 0, duration: .3, onComplete: () => {
+                $('.popup-feedback-form').css('display', 'none')
+                $('body').css('overflow', 'auto')
+            }})
+    })
+
+    window.addEventListener('resize', () => {
+        logoAnimationToggle();
     })
 
 });
